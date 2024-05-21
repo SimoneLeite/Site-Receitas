@@ -1,0 +1,314 @@
+/*estilo do site Receitas*/
+
+
+/* ==========================================================================*/
+
+/* ================== BODY, HTML ===============*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* ========== CONTAINER =========== */
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.container img{
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: auto;
+    z-index: 1000;
+    margin-left: 5px;
+}
+
+/* ============== CONTEUDO =============*/
+.conteudo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/verde.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 70px;
+}
+
+
+.conteudo-index {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-image: url("./img/logopng");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+/* ============== MENU =============*/
+.menu ul{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    list-style-type: none;
+    background-color: #e5d8d9;
+    flex-grow: 1;
+    justify-content: flex-end; /* alinhamento horizontal */
+    color: white;
+    font-weight: 400; /* letra em negrito */
+}
+
+.menu ul li{
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px; 
+}
+
+
+.menu ul li:hover{
+    background-color: rgb(119, 90, 101);
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgb(9, 9, 10);
+    
+}
+/* ==========================================================================*/
+
+/* ==================== CARD =================*/
+
+.card {
+    margin: 20px;
+    border: 0.1px solid #868686;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: #e5d8d9;
+    width: 700px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+   
+}
+
+.card button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 15px;
+    align-self: flex-end;
+}
+
+.card form{
+    display: inline-block;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.foto{
+    grid-column: 1; 
+    grid-row: 1 / span 2; 
+}
+
+
+
+
+/* ==========================================================================*/
+/*img{
+    height:65px;
+    width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+}
+
+/*  ==============FORMULARIO ==============*/
+.col{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.formulario{  /*parte onde fica cadastro, ESTABELECIMENTOS, botões*/
+    margin: 50px auto;
+    border: 1px solid #868686;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #e5d8d9;
+    max-width: 800px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/*============== TITULO =============*/
+.titulo {
+    font-size: 36px;
+    text-align: center;
+}
+
+
+.fundoTitulo {
+    background-color: #9c7d7f;
+    text-align: left;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+
+/*  ==============ESCOPO ==============*/
+
+.escopo {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+}
+
+/* ==================== BOTÕES =================*/
+.botao img{
+    max-width: 30px;
+    height: auto;
+}
+
+.btnEditar,
+.btnExcluir {
+    background-color: #9b6a6d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnEditar:hover,
+.btnExcluir:hover {
+    background-color: #a7a07b;
+}
+
+.btnEditarphp{
+    display: flex;
+    text-align: right;
+}
+
+
+
+/* Estilos para responsividade */
+
+@media (max-width: 768px) {
+    .escopo {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+ /* CADASTRO RECEITAS */
+
+.receitas{
+    justify-content: center /* alinhamento na horizontal*/;
+    flex-direction: column; /* altera a direção dos objetos na div*/
+}
+
+
+
+/* INPUTS*/
+
+input[type="submit"],
+input[type="reset"]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="text"]{
+    size-adjust: auto;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.row{
+    margin-top: 15px;
+   
+}
+
+.col{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+
+input[type="checkbox"]{
+    height: 25px;
+}
+
+input[type="submit"]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:hover{
+    background-color: #9b6a6d;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/* ==================== LOGOS =================*/
+.logo1 {
+    width: 200px; 
+    height: auto;
+    margin-top: 200px; 
+}
+
+
+
+
